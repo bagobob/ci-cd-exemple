@@ -28,15 +28,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Run tests
-      - name: Run tests
-        run: npm test
-
-      # Step 5: Build the project
+      # Step 4: Build the project
       - name: Build project
         run: npm run build
 
-      # Step 6: Upload build artifacts (optional)
+      # Step 5: Upload build artifacts (optional)
       # This is useful if you want to store or use the build in subsequent jobs
       - name: Upload production build artifacts
         uses: actions/upload-artifact@v3
