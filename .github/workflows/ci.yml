@@ -32,16 +32,3 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Step 5: Upload build artifacts (optional)
-      # This is useful if you want to store or use the build in subsequent jobs
-      - name: Upload production build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-build
-          path: dist/
-            # Step 7: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
